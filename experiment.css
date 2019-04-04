@@ -37,6 +37,81 @@
   --font-family-monospace: aktiv-grotesk
 }
 
+.bgimg {
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 750px;
+  background-image: url("/static/images/about-us.svg");
+  overflow: hidden;
+  background-size: cover;
+}
+
+.color-inherit {
+  color: inherit!important
+}
+
+.color-inherit .text-muted {
+  color: rgba(0, 0, 0, 0.5)!important
+}
+
+.color-inherit h4 {
+  line-height: 1.5
+}
+
+.blog-tab {
+  display: block;
+  white-space: nowrap;
+  overflow: auto
+}
+
+.blog-tab .nav-item {
+  display: inline-block
+}
+
+.blog-tab .nav-item .nav-link {
+  color: rgba(0, 0, 0, 0.7)!important;
+  font-weight: 400;
+  padding-left: 0;
+  padding-right: 30px
+}
+
+@media only screen and (max-width:480px) {
+  .color-inherit h2 {
+    font-size: 1rem;
+    font-weight: 500!important;
+    line-height: 1.2;
+    color: inherit;
+    margin-bottom: 5px!important;
+    margin-top: 10px
+  }
+  .color-inherit h4, .color-inherit h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5
+  }
+  .img-fluid {
+    max-width: 100%!important
+  }
+  .accordion .card .card-header {
+    padding: 5px 10px;
+    font-size: 13px
+  }
+  .accordion .card .card-header .input-group .form-control {
+    border-right: 0;
+    padding-right: 0;
+    font-size: 13px
+  }
+  .accordion .card .card-header .input-group-text {
+    padding-left: 0;
+    background-color: #fff;
+    font-size: 12px;
+    padding-right: 5px
+  }
+  .accordion .card .card-header .col-1 {
+    padding: 0
+  }
+}
+
 *, :after, :before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box
@@ -8875,7 +8950,8 @@ a.text-dark:focus, a.text-dark:hover {
   color: #4b4b4b;
   padding: 7px 15px;
   border-radius: 20px;
-  line-height: 1
+  line-height: 1;
+  font-size: 13px;
 }
 
 .pills-tab .nav-item .nav-link.active {
@@ -9090,6 +9166,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 .globalNav .navSection.primary .rootLink {
   color: rgba(0, 0, 0, 0.7);
+  font-size: 17px;
   padding: 0px 15px
 }
 
@@ -9420,6 +9497,7 @@ a.text-dark:focus, a.text-dark:hover {
   margin: 0;
   color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
+  line-height: 26px;
   letter-spacing: .025em;
   -webkit-transition: color .1s;
   -o-transition: color .1s;
@@ -9865,6 +9943,7 @@ a.text-dark:focus, a.text-dark:hover {
 .globalNav .mobileProductsList a {
   padding: 0 30px;
   font-size: 18px;
+  line-height: 50px;
 }
 
 .globalNav .mobileProductsList a:hover {
