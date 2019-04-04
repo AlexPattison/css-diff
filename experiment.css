@@ -62,7 +62,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: "aktiv-grotesk";
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -332,19 +332,10 @@ template {
   display: none!important
 }
 
-.bgimg {
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 750px;
-  background-image: url("/static/images/about-us.svg");
-  overflow: hidden;
-  background-size: cover;
-}
-
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
   color: inherit
 }
@@ -7657,7 +7648,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .mb-5, .my-5 {
-  margin-bottom: 3rem!important
+  margin-bottom: 1.5rem!important
 }
 
 .ml-5, .mx-5 {
@@ -7777,7 +7768,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .pb-5, .py-5 {
-  padding-bottom: 3rem!important
+  padding-bottom: 1rem!important
 }
 
 .pl-5, .px-5 {
@@ -8280,7 +8271,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
     margin: 3rem!important
   }
   .mt-lg-5, .my-lg-5 {
-    margin-top: 3rem!important
+    margin-top: 1rem!important
   }
   .mr-lg-5, .mx-lg-5 {
     margin-right: 3rem!important
@@ -8881,11 +8872,10 @@ a.text-dark:focus, a.text-dark:hover {
   margin: 0;
   border: none;
   background-color: #e9ecef;
-  color: #000;
+  color: #4b4b4b;
   padding: 7px 15px;
   border-radius: 20px;
-  line-height: 1;
-  font-size: 13px
+  line-height: 1
 }
 
 .pills-tab .nav-item .nav-link.active {
@@ -9058,14 +9048,14 @@ a.text-dark:focus, a.text-dark:hover {
 .globalNav a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-  color: #6772e5;
+  color: rgba(0, 0, 0, 0.7);
   -webkit-transition: color .1s;
   -o-transition: color .1s;
   transition: color .1s
 }
 
 .globalNav a:hover {
-  color: #32325d
+  opacity: .5
 }
 
 .globalNav>.container {
@@ -9099,13 +9089,12 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .globalNav .navSection.primary .rootLink {
-  color: #000;
-  font-size: 17px;
+  color: rgba(0, 0, 0, 0.7);
   padding: 0px 15px
 }
 
 .globalNav .navSection.primary .rootLink:hover {
-  opacity: .7
+  opacity: .5
 }
 
 .globalNav .navSection.secondary {
@@ -9116,9 +9105,12 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .globalNav .navSection.secondary .rootLink {
-  color: #000;
-  font-size: 17px;
+  color: rgba(0, 0, 0, 0.7);
   padding: 0px 15px
+}
+
+.globalNav .navSection.secondary .rootLink:hover {
+  opacity: .5
 }
 
 .globalNav .navSection.secondary .rootLink:last-child {
@@ -9193,7 +9185,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .globalNav .colorize {
-  color: #6772e5;
+  color: rgba(0, 0, 0, 0.7);
   -webkit-transition: color .1s ease;
   -o-transition: color .1s ease;
   transition: color .1s ease
@@ -9227,8 +9219,8 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .globalNav .item-dashboard:after {
-  font: normal 16px StripeIcons;
-  content: '\279E';
+  font: normal 16px;
+  content: '\25B7';
   padding-left: 1px
 }
 
@@ -9384,7 +9376,7 @@ a.text-dark:focus, a.text-dark:hover {
 .globalNav .dropdownContent {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0
 }
 
 .globalNav .linkGroup {
@@ -9428,7 +9420,6 @@ a.text-dark:focus, a.text-dark:hover {
   margin: 0;
   color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
-  line-height: 26px;
   letter-spacing: .025em;
   -webkit-transition: color .1s;
   -o-transition: color .1s;
@@ -9511,6 +9502,73 @@ a.text-dark:focus, a.text-dark:hover {
   box-shadow: none
 }
 
+.globalNav .productsGroup {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* width: 640px;
+  max-width: calc(100vw - 85px);
+  margin: -5px -10px */
+}
+
+.globalNav .productsGroup>li {
+  -webkit-flex: 1 0 50%;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.globalNav .productsGroup .linkContainer {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /* padding: 18px 10px; */
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.globalNav .productsGroup svg {
+  width: 48px;
+  height: 48px
+}
+
+.globalNav .productLinkContent {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 71px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
 .globalNav .prodsubGroup {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9589,7 +9647,7 @@ a.text-dark:focus, a.text-dark:hover {
 .globalNav .documentationArticles h4 {
   font-size: 14px;
   line-height: 22px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .025em;
   margin: 0 0 3px;
@@ -9711,7 +9769,7 @@ a.text-dark:focus, a.text-dark:hover {
 .globalNav .popupCloseButton:after {
   content: '';
   position: absolute;
-  background: #6772e5;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 1px;
   left: 14px;
   right: 14px;
@@ -9731,7 +9789,7 @@ a.text-dark:focus, a.text-dark:hover {
 .globalNav .popupCloseButton:before {
   content: '';
   position: absolute;
-  background: #6772e5;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 1px;
   left: 14px;
   right: 14px;
@@ -9762,12 +9820,13 @@ a.text-dark:focus, a.text-dark:hover {
 
 .globalNav .mobileSignIn:after {
   font: normal 16px StripeIcons;
-  content: '\279C';
+  content: '\25B7';
   margin-left: 6px
 }
 
 .globalNav .mobileProducts {
-  padding: 20px 0 15px
+  padding: 20px 0 15px;
+  border-top: 2px solid #f6f9fc
 }
 
 .globalNav .mobileProducts h4 {
@@ -9806,11 +9865,10 @@ a.text-dark:focus, a.text-dark:hover {
 .globalNav .mobileProductsList a {
   padding: 0 30px;
   font-size: 18px;
-  line-height: 50px;
 }
 
 .globalNav .mobileProductsList a:hover {
-  color: #32325d
+  opacity: .5
 }
 
 .globalNav .mobileProductsList a svg {
@@ -9870,6 +9928,10 @@ a.text-dark:focus, a.text-dark:hover {
 .globalNav .mobileSecondaryNav a {
   padding: 0 20px;
   min-width: 100px
+}
+
+.globalNav .mobileSecondaryNav a:hover {
+  opacity: .5
 }
 
 .globalNav.compact .navRoot {
@@ -10041,24 +10103,12 @@ a {
   text-decoration: none!important
 }
 
-.color-inherit {
-  color: inherit!important
-}
-
-.color-inherit .text-muted {
-  color: rgba(0, 0, 0, 0.5)!important
-}
-
-.color-inherit h4 {
-  line-height: 1.5
-}
-
 .text-muted {
   color: rgba(0, 0, 0, 0.54)
 }
 
 .hero-banner {
-  padding-top: 175px;
+  padding-top: 120px;
   padding-bottom: 50px
 }
 
@@ -10173,6 +10223,7 @@ a {
 }
 
 .block {
+  border-radius: 10px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -10224,24 +10275,10 @@ footer ul li a {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
 }
 
-.blog-tab {
-  display: block;
-  white-space: nowrap;
-  overflow: auto
-}
-
-.blog-tab .nav-item {
-  display: inline-block
-}
-
-.blog-tab .nav-item .nav-link {
-  color: rgba(0, 0, 0, 0.7)!important;
-  font-weight: 400;
-  padding-left: 0;
-  padding-right: 30px
-}
-
 @media only screen and (max-width:991px) {
+  .center-text {
+    text-align: center;
+  }
   .menu {
     -webkit-box-shadow: 0px 0px 11px 0px #ddd;
     box-shadow: 0px 0px 11px 0px #ddd
@@ -10255,13 +10292,16 @@ footer ul li a {
 }
 
 @media only screen and (max-width:767px) {
+  .center-text {
+    text-align: center;
+  }
   .hero-banner h1 {
     line-height: 25px;
     font-size: 30px
   }
   .hero-banner h4 {
     margin-bottom: 34px;
-    font-size: 16px
+    font-size: 20px
   }
   h2 {
     font-size: 1.5rem
@@ -10277,6 +10317,9 @@ footer ul li a {
     -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
   }
+}
+
+@media only screen and (max-width:767px) {
   .nav-tabs.round-tab {
     display: block;
     white-space: nowrap;
@@ -10288,43 +10331,6 @@ footer ul li a {
   }
   .nav-tabs.round-tab .nav-item .nav-link {
     padding: 0 9px
-  }
-}
-
-@media only screen and (max-width:480px) {
-  .color-inherit h2 {
-    font-size: 1rem;
-    font-weight: 500!important;
-    line-height: 1.2;
-    color: inherit;
-    margin-bottom: 5px!important;
-    margin-top: 10px
-  }
-  .color-inherit h4, .color-inherit h5 {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5
-  }
-  .img-fluid {
-    max-width: 100%!important
-  }
-  .accordion .card .card-header {
-    padding: 5px 10px;
-    font-size: 13px
-  }
-  .accordion .card .card-header .input-group .form-control {
-    border-right: 0;
-    padding-right: 0;
-    font-size: 13px
-  }
-  .accordion .card .card-header .input-group-text {
-    padding-left: 0;
-    background-color: #fff;
-    font-size: 12px;
-    padding-right: 5px
-  }
-  .accordion .card .card-header .col-1 {
-    padding: 0
   }
 }
 
@@ -10444,4 +10450,8 @@ footer ul li a {
 
 .no-js .owl-carousel {
   display: block
+}
+
+.react-bodymovin-container {
+  margin-top: -50px
 }
